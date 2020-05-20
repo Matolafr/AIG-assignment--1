@@ -36,7 +36,7 @@ train_data = data_shuffled[1:splitt,1:end-2]
 train_values = data_shuffled[1:splitt,end]
 bias = fill(1, splitt)
 train_data = hcat(train_data,bias)
-#train_data = train_data./maximum(train_data)
+train_data = train_data./maximum(train_data)
 
 test_data = data_shuffled[splitt+1:end,1:end-2]
 test_values = data_shuffled[splitt+1:end,end]
